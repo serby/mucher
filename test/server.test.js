@@ -61,5 +61,13 @@ describe('mucher', () => {
       const response = await request(server).get('/')
       expect(response.headers['x-frame-options']).toEqual('DENY')
     })
+    it('should have 304 if etag present', async () => {
+      const response = await request(server).get('/')
+      expect(response.headers['etag']).toEqual('W/"16-1618735a3d8"')
+      expect(response.status).toEqual(200)
+      const secondResponse = await request(server).get('/').set('If-None-Match', 'W/"16-1618735a3d8"')
+      expect(secondResponse.headers['etag']).toEqual('W/"16-1618735a3d8"')
+      expect(secondResponse.status).toEqual(304)
+    })
   })
 })

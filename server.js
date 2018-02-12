@@ -4,6 +4,8 @@ const { join } = require('path')
 const notFound = require('./middleware/not-found')
 const headers = require('./middleware/headers')
 const xss = require('./middleware/xss')
+const conditional = require('koa-conditional-get')
+const etag = require('koa-etag')
 
 const defaultHeaders = {
   'X-Frame-Options': 'DENY',
@@ -21,6 +23,8 @@ module.exports = async (path) => {
     return next()
   })
   server.use(xss)
+  server.use(conditional())
+  server.use(etag())
   const headersMiddleware = await headers(path)
   if (headersMiddleware) server.use(headersMiddleware)
   server.use(serve(join(path, '/public')))
