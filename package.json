@@ -4,6 +4,7 @@
     "mucher": "./app.js"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "jest test",
     "start": "nodemon app"
   },
@@ -32,6 +33,6 @@
   "description": "Simple Static Web Server With Custom 404 and secure headers",
   "main": "app.js",
   "repository": "git@github.com:serby/mucher.git",
-  "author": "Paul Serby <paul.serby@clock.co.uk>",
+  "author": "Paul Serby <paul@serby.net>",
   "private": false
 }
