@@ -26,5 +26,12 @@
     "jest": "^22.2.2",
     "nodemon": "^1.14.12",
     "supertest": "^3.0.0"
-  }
+  },
+  "name": "mucher",
+  "version": "1.0.0",
+  "description": "Simple Static Web Server With Custom 404 and secure headers",
+  "main": "app.js",
+  "repository": "git@github.com:serby/mucher.git",
+  "author": "Paul Serby <paul.serby@clock.co.uk>",
+  "private": false
 }
