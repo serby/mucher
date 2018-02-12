@@ -6,7 +6,7 @@ describe('server', () => {
   describe('defaults', () => {
     let server
     beforeEach(async () => {
-      server = (await createServer(join(__dirname, '../serve'))).listen(3000)
+      server = (await createServer(join(__dirname, './serve'))).listen(3000)
     })
     afterEach(async () => {
       server.close()
