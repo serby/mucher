@@ -1,0 +1,10 @@
+**/node_modules
+coverage
+**/vendor
+**/build
+site/assets/js
+admin/source/js/components.js
+mobile-app/www/js/
+mobile-app/plugins
+mobile-app/platforms
+dist
