@@ -2,7 +2,7 @@ const { join } = require('path')
 const request = require('supertest')
 const createServer = require('../server')
 
-describe('server', () => {
+describe('mucher', () => {
   describe('defaults', () => {
     let server
     beforeEach(async () => {
