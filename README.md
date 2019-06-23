@@ -1,5 +1,7 @@
 # Mucher
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/serby/mucher.svg)](https://greenkeeper.io/)
+
 Simple Static Web Server With Custom 404 and secure headers
 
 ## Installation
